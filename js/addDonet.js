@@ -12,8 +12,14 @@ document
       donateNowBtn.classList.add("hidden");
       return;
     }
+
     const newBalance = addMoney + donationBalance;
     const donationNewBalance = donationAccountBalance - addMoney;
+    if (addMoney > donationAccountBalance) {
+      alert("You are low on money. please try again");
+      donateNowBtn.classList.add("hidden");
+      return;
+    }
     document.getElementById("donation-balance").innerText = newBalance;
     document.getElementById("donation-account-balance").innerText =
       donationNewBalance;
@@ -21,7 +27,7 @@ document
     const date = new Date();
     div.innerHTML = `
       <div class="border-2 p-4 rounded-2xl border-[#EDEDED]  mt-3">
-      <p >${addMoney} Taka is Donated for famine-2024 at Quota, Bangladesh
+      <p >${addMoney} Taka is Donated for famine-2024 at Noakhali, Bangladesh
      </p> <p> ${date}
       </p></div>
       
@@ -50,7 +56,7 @@ document
     const date = new Date();
     div.innerHTML = `
       <div class="border-2 p-4 rounded-2xl border-[#EDEDED]  mt-3">
-      <p >${addMoney} Taka is Donated for famine-2024 at Quota, Bangladesh
+      <p >${addMoney} Taka is Donated for famine-2024 at Feni, Bangladesh
      </p> <p> ${date}
       </p></div>
       
@@ -82,7 +88,7 @@ document
     const date = new Date();
     div.innerHTML = `
       <div class="border-2 p-4 rounded-2xl border-[#EDEDED]  mt-3">
-      <p >${addMoney} Taka is Donated for famine-2024 at Quota, Bangladesh
+      <p >${addMoney} Taka is Donated for famine-2024 at Quota Movement, Bangladesh
      </p> <p> ${date}
       </p></div>
       
