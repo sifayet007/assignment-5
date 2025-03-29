@@ -89,7 +89,6 @@ document
     if (addMoney > donationAccountBalance) {
       alert("You are low on money. please try again");
       donateNowBtn.classList.add("hidden");
-      return;
     }
     document.getElementById("quota-add-balance").innerText = newBalance;
     document.getElementById("donation-account-balance").innerText =
