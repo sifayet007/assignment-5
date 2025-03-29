@@ -34,6 +34,7 @@ document
       `;
     document.getElementById("history-container").appendChild(div);
   });
+// hero section 2
 
 document
   .getElementById("feni-donation-button")
@@ -49,6 +50,11 @@ document
     }
     const newBalance = addMoney + donationBalance;
     const donationNewBalance = donationAccountBalance - addMoney;
+    if (addMoney > donationAccountBalance) {
+      alert("You are low on money. please try again");
+      donateNowBtn.classList.add("hidden");
+      return;
+    }
     document.getElementById("feni-donation-balance").innerText = newBalance;
     document.getElementById("donation-account-balance").innerText =
       donationNewBalance;
@@ -63,7 +69,7 @@ document
       `;
     document.getElementById("history-container").appendChild(div);
   });
-
+// hero section 3
 document
   .getElementById("quota-donation-button")
   .addEventListener("click", function () {
@@ -80,6 +86,11 @@ document
 
     const newBalance = addMoney + donationBalance;
     const donationNewBalance = donationAccountBalance - addMoney;
+    if (addMoney > donationAccountBalance) {
+      alert("You are low on money. please try again");
+      donateNowBtn.classList.add("hidden");
+      return;
+    }
     document.getElementById("quota-add-balance").innerText = newBalance;
     document.getElementById("donation-account-balance").innerText =
       donationNewBalance;
